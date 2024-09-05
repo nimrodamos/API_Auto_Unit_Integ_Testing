@@ -6,30 +6,6 @@ require("dotenv").config();
 const app = express();
 const port = 3008;
 
-const dbConfig = {
-  server: process.env.DB_SERVER,
-  database: process.env.DB_DATABASE,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  pool: {
-    max: 10,
-    min: 0,
-    idleTimeoutMillis: 30000,
-  },
-  options: {
-    trustServerCertificate: true, // Bypass SSL certificate validation
-    trustedConnection: true,
-    connectTimeout: 30000, // Increase connection timeout to 30 seconds
-  },
-};
-app.add = function () {
-  return "success";
-};
-
-app.sum = (a, b) => {
-  return a + b;
-};
-
 // Route to get all products
 app.get("/products", async (req, res) => {
   try {
