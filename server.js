@@ -3,7 +3,7 @@ const axios = require("axios");
 const express = require("express");
 require("dotenv").config();
 const app = express();
-const port = 3015;
+const port = 3000;
 
 // מסלול חדש להצגת כל המוצרים
 app.get("/allProducts", async (req, res) => {
